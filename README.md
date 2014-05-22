@@ -4,7 +4,23 @@ GAE-Web-App-Project-----Tweet-Map
 What is it?
 -----------
 
-Compute 100MB date via Google App Engine using Python and Twitter API
+Compute 100MB data via Google App Engine using Python and Twitter API
+
+Language
+--------
+
+- Python
+- JavaScript
+- HTML 
+- CSS
+
+Implementation
+--------------
+
+- Store 100MB data in Google App Engine: DataStore
+- Accelerate the data computation via Google App Engine: Memcached
+- Retreive 100MB Tweet via Twitter API
+- Use Google Heat Map API to display 100MB tweet by awesome Heat Map 
    
 
 The Latest Version
