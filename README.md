@@ -17,7 +17,7 @@ Details of the latest version can be found on the project page:
 Installation
 ------------
 
-Please follow the below link to deploy the project to Google App Engine:
+Please follow the below link to deploy on Google App Engine:
 https://developers.google.com/appengine/docs/python/gettingstartedpython27/uploading
  
 
