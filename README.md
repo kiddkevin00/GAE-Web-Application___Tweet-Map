@@ -33,7 +33,7 @@ Details of the latest version can be found on the project page:
 Installation
 ------------
 
-- I have included all the necessary library source codes in this porject, except the following Teitter's key in ```tweeterStream```: 
+- I have included all the necessary library source codes in this porject, except the four following Teitter's key in ```tweeterStream.py```: 
 	APP_KEY/ APP_SECRET/ ACCESS_TOKEN/ ACCESS_TOKEN_SECRET 
 - Please follow the below link to deploy on Google App Engine:
 https://developers.google.com/appengine/docs/python/gettingstartedpython27/uploading
