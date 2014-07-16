@@ -73,7 +73,7 @@ class MainHandler(webapp2.RequestHandler):
 			logging.debug( len(coordinates))
 
 		template_values = {
-				'coordinates': coordinates,
+			'coordinates': coordinates,
             	
         }
 

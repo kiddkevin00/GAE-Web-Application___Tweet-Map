@@ -2,37 +2,49 @@
 <html>
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <title>Google App Engine DEMO proeject</title>
+
   <style type="text/css">
-  form {font-size:20px;
-	color:white;
-	background-color:#40B3DF;
-	}
+  form {
+    font-size:20px;
+    color:white;
+    background-color:#40B3DF;
+  }
+
   input[type=submit] {
     -webkit-appearance: none;
     width: 5em;  height: 70px;
   }
+
   select {
     -webkit-appearance: none;
     width: 10em;  height: 2em;
   }
 
-  html { height: 100% }
-  body { height: 100%; margin: 0; padding: 0 }
-  #map-canvas { height: 100% }
+  html { 
+    height: 100% 
+  }
+
+  body { 
+    height: 100%; 
+    margin: 0; 
+    padding: 0
+  }
+  #map-canvas { 
+    height: 100% 
+  }
   </style>
+
   <script type="text/javascript"
   src="https://maps.googleapis.com/maps/api/js?key={ENTER_YOUR_GOOGLE_MAP_API}&sensor=false&libraries=visualization">
   </script>
   <script type="text/javascript">
   function initialize() {
-
-
     //resceiving coordinates from main.py
     var coordinates = new Array();
     coordinates = {{ coordinates }};
     console.log("coordinates: " + coordinates);
     //console.log(coordinates[0][0],coordinates[1][1],coordinates[2][1]);
-
     
     var mapOptions = {
       zoom: 3,
@@ -41,7 +53,6 @@
 
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-    
     //for testing
     // var myLatlng = new google.maps.LatLng(coordinates[0][1],coordinates[0][0])
     // var marker = new google.maps.Marker({
@@ -61,36 +72,26 @@
     //   });
     // }
 
-	
-
     // To add the marker to the map, use the 'map' property
     var x;
     var myLatlng = new Array();
     for (x=0;x<coordinates.length;x++)
-{
-       myLatlng[x] = new google.maps.LatLng(coordinates[x][1],coordinates[x][0]);
+    {
+     myLatlng[x] = new google.maps.LatLng(coordinates[x][1],coordinates[x][0]);
     //  var marker2 = new google.maps.Marker({
     //    position: myLatlng,
     //    map: map,
     //    title:"Hello d!"
     //  });Worl
-	
-	}
+    }
 
-	//heatmap
-	var heatArray = new google.maps.MVCArray(myLatlng);
-	heatMap = new google.maps.visualization.HeatmapLayer({
-		data: heatArray
-	});
-		heatMap.setMap(map);
-
-    
-
-	
-	
-
+  	//heatmap
+  	var heatArray = new google.maps.MVCArray(myLatlng);
+  	heatMap = new google.maps.visualization.HeatmapLayer({
+  		data: heatArray
+  	});
+    heatMap.setMap(map);	
   }
-
   google.maps.event.addDomListener(window, 'load', initialize);
   </script>
 </head>
