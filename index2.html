@@ -13,7 +13,7 @@
 
   input[type=submit] {
     -webkit-appearance: none;
-    width: 5em;  height: 70px;
+    width: 5em;  height: 30px;
   }
 
   select {
@@ -36,7 +36,7 @@
   </style>
 
   <script type="text/javascript"
-  src="https://maps.googleapis.com/maps/api/js?key={ENTER_YOUR_GOOGLE_MAP_API}&sensor=false&libraries=visualization">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtH9-ENMykowyVoF0MhzXC47KPpNtI2oA&sensor=false&libraries=visualization">
   </script>
   <script type="text/javascript">
   function initialize() {
@@ -99,6 +99,7 @@
   <form name="input"  method="get">
     <!-- Please Enter the listing Keyword : <input type="text"  name="keyword">  -->
     Please Select a Keyword : &nbsp;<select name="keyword">
+    <option value="vettel">Sebastian Vettel</option>
     <option value="lebron">Lebron James</option>
     <option value="messi">Lionel Messi</option>
     <option value="bolt">Usain Bolt</option>
@@ -106,7 +107,6 @@
     <option value="kobe">Kobe Bryant</option>
     <option value="federer">Roger Federer</option>
     <option value="ronaldo">Cristiano Ronaldo</option>
-    <option value="vettel">Sebastian Vettel</option>
     <option value="jeter">Derek Jeter</option>
     <option value="nadal">Rafael Nadal</option>
     <input type="submit" value="Submit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tweets based on your keyword are all shown in the map as below 
