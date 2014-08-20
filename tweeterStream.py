@@ -1,11 +1,15 @@
 from twython import Twython, TwythonStreamer
 import os, time
 
-APP_KEY = ' ENTER_YOUR_APP_KEY '
-APP_SECRET = ' ENTER_YOUR_APP_SECRET '
-ACCESS_TOKEN = ' ENTER_YOUR_ACCESS_TOKEN '
-ACCESS_TOKEN_SECRET = ' ENTER_YOUR_TOKEN_SECRET '
-FILE_NAME = 'data/vettel'
+# APP_KEY = ' ENTER_YOUR_APP_KEY '
+# APP_SECRET = ' ENTER_YOUR_APP_SECRET '
+# ACCESS_TOKEN = ' ENTER_YOUR_ACCESS_TOKEN '
+# ACCESS_TOKEN_SECRET = ' ENTER_YOUR_TOKEN_SECRET '
+APP_KEY = 'D4dctRLEnUieVGk5dXmdhFFqT'
+APP_SECRET = 'BHPGUHFKk66cRL40MR4rXec26DsrKtXa36iii92wyBZcrWZ9tb'
+ACCESS_TOKEN = '1914184802-niSHlUKUWZaVO3h2seLSxIcrDnFy4zu5tJDNXGc'
+ACCESS_TOKEN_SECRET = 'axdMrkkUavyI7UhUpiRdtLlZ1v2JqYPYPtubfj4mmuer9'
+FILE_NAME = 'data/jeter'
 
 class MyStreamer(TwythonStreamer):
     def on_success(self, data):
@@ -42,4 +46,4 @@ class MyStreamer(TwythonStreamer):
 
 
 stream = MyStreamer(APP_KEY, APP_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-stream.statuses.filter(track='sebastian vettel', locations='-180,-90,180,90')
+stream.statuses.filter(track='derek jeter', locations='-180,-90,180,90')
